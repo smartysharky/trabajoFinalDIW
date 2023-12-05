@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aventura Land</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/styleNuesParques.css">
+
+    <link rel="stylesheet" href="../styles/hamburger.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="../img/logo1.svg">
+                <h1>Aventura Land</h1>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger" id="hamburger-icon">&#9776;</div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./ventaEntradas.html">Compra tus entradas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="lookPark">
+                <div class="search">
+                    <img>
+                    <input type="text">
+                </div>
+                <div class="map"></div>
+            </div>
+            <div class="parksCollection">
+                <div class="park">
+                    <img src="">
+                    <div class="desc">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="park">
+                    <img src="">
+                    <div class="desc">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="park">
+                    <img src="">
+                    <div class="desc">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="park">
+                    <img src="">
+                    <div class="desc">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="park">
+                    <img src="">
+                    <div class="desc">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="park">
+                    <img src="">
+                    <div class="desc">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados</p>
+        </footer>
+    </div>
+    <script>
+        // Hace visible el menu de navegación cuando se pulsa el icon de menu
+        document.getElementById('hamburger-icon').addEventListener('click', function () {
+            let nav = document.querySelector('nav');
+            // Alternar entre 'flex' y 'none' según la propiedad actual de visualización
+            nav.style.display = nav.style.display === 'none' || nav.style.display === '' ? 'flex' : 'none';
+        });
+    </script>
+</body>
+
+</html>

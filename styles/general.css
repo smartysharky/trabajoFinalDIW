@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FCA738;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    font-family: 'Palanquin Dark', sans-serif;
+    color: white;
+    text-shadow: 1px 5px 5px #F24747;
+}
+
+.logo img {
+    width: 8%;
+    float: left;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #FCA738;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,211 @@
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "gallery"
+        "squares"
+        "txt";
+}
+
+.gallery{
+    grid-area: gallery;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+.squares {
+    grid-area: squares;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-top: -16%;
+}
+
+.squares .card {
+    position: relative;
+    cursor: pointer;
+}
+
+.squares .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.squares .card .face.face1 {
+    position: relative;
+    background: #F24747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    text-align: center;
+}
+
+.squares .card:hover .face.face1 {
+    background: #62A6E8;
+    transform: translateY(0);
+}
+
+.squares .card .face.face1 .content {
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.squares .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.squares .card .face.face1 .content img {
+    max-width: 100px;
+}
+
+.squares .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.squares .card .face.face2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    background-color: white;
+}
+
+.squares .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.squares .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.squares .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.squares .card .face.face2 .content a:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+.txt {
+    grid-area: txt;
+    margin-left: 25%;
+    margin-right: 25%;
+    line-height: 27px;
+}
+
+.decor {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px){
+    .squares{
+        flex-direction: column;
+        margin-top: -10%;
+    }
+}
+
+/*Este media evita que las tarjetas cubran los botones cuando de juntan mucho
+pero no los suficiente para ponerse en columna*/
+@media screen and (max-width: 900px){
+    .squares{
+        margin-top: -10%;
+    }
+}
