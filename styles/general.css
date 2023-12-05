@@ -44,3 +44,31 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+.redes{
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.redes img{
+    width: 15%;
+    margin-bottom: 10%;
+}
+
+.insta:hover{
+    background-color: #E1306C;
+    border-radius: 15%;
+    padding: 5%;
+}
+
+.x:hover{
+    background-color: white;
+    border-radius: 15%;
+    padding: 5%;
+}

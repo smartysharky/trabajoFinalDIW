@@ -16,8 +16,8 @@ nav {
     top: 60px;
     /* Adjust the top position as needed */
     right: 10px;
-    background-color: #F24747;
-    border-radius: 5px;
+    background-color: #62A6E8;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
@@ -26,9 +26,10 @@ nav ul {
     display: flex;
     list-style: none;
     padding: 20px;
-    /* Add padding around the list */
     margin: 0;
     flex-direction: column;
+    border: thick solid #F24747;
+    border-radius: 10px;
 }
 
 nav ul li {
@@ -44,6 +45,6 @@ nav ul li a {
 }
 
 nav a:hover {
-    color: #62A6E8;
+    color: #F24747;
     text-decoration: underline;
 }
