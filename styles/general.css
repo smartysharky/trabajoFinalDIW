@@ -27,6 +27,7 @@ header {
     font-family: 'Palanquin Dark', sans-serif;
     color: white;
     text-shadow: 1px 5px 5px #F24747;
+    font-size: 40px;
 }
 
 .logo img {
@@ -68,7 +69,15 @@ footer {
 }
 
 .x:hover{
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 15%;
     padding: 5%;
+}
+
+input:checked {
+    border: 1px solid #62A6E8;
+}
+
+.decor {
+    font-weight: bold;
 }

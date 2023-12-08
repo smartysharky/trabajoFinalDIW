@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
     grid-template-areas:
         "header header header"
@@ -189,10 +189,37 @@ main {
     margin-left: 25%;
     margin-right: 25%;
     line-height: 27px;
+    margin-bottom: 1%;
 }
 
-.decor {
-    font-weight: bold;
+.subscribe{
+    border: 3px solid #F24747;
+    border-radius: 13px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 3%;
+}
+
+.subscribe form{
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    grid-area: button;
+    padding: 10px 0px;
+    width: 15%;
+    border: none;
+    margin-top: 2%;
+    border-radius: 5%;
+    justify-self: center;
+    border: 2px solid #62A6E8;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #62A6E8;
 }
 
 @media screen and (max-width: 700px){

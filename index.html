@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="./styles/hamburger.css">
     <!-- hamburger icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="atracciones, parques de atracciones, parques temáticos">
+    <meta name="description" content="Explora la magia de Aventura Land, donde la diversión cobra vida en nuestros parques temáticos.">
 </head>
 
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="img/logo1.svg">
+                <img src="img/logo1.svg" alt="logo">
                 <h1>AVENTURA LAND</h1>
             </div>
             <div class="hamburger-menu">
@@ -33,19 +36,19 @@
                 <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                        <img src="./img/carousel/car1.jpg">
+                        <img src="./img/carousel/car1.jpg" alt="carousel1">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="./img/carousel/car2.jpg">
+                        <img src="./img/carousel/car2.jpg" alt="carousel2">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="./img/carousel/car3.jpg">
+                        <img src="./img/carousel/car3.jpg" alt="carousel3">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="./img/carousel/car4.jpg">
+                        <img src="./img/carousel/car4.jpg" alt="carousel4">
                     </div>
                 </div>
                 <br>
@@ -60,7 +63,7 @@
                 <div class="card">
                     <div class="face face1">
                         <div class="content">
-                            <img src="./img/iconos/schedule_FILL0_wght400_GRAD0_opsz24.svg">
+                            <img src="./img/iconos/location_on_FILL0_wght400_GRAD0_opsz24.svg" alt="locationIcon">
                             <h3>Nuestros Parques</h3>
                         </div>
                     </div>
@@ -78,7 +81,7 @@
                 <div class="card">
                     <div class="face face1">
                         <div class="content">
-                            <img src="./img/iconos/local_mall_FILL0_wght400_GRAD0_opsz24.svg">
+                            <img src="./img/iconos/local_mall_FILL0_wght400_GRAD0_opsz24.svg" alt="timeIcon">
                             <h3>Compra tus Entradas</h3>
                         </div>
                     </div>
@@ -92,7 +95,7 @@
                     </div>
                 </div>
             </section>
-            <section class="txt">
+            <div class="txt">
                 <p>¡Bienvenidos a <span class="decor">Aventura Land</span>, donde la emoción y la diversión se
                     encuentran en cada esquina!
                     Sumérgete
@@ -113,14 +116,24 @@
                     Compra tus boletos ahora y ven a Aventura Land, donde la diversión nunca se detiene. ¡Te
                     esperamos para <span class="decor">compartir momentos inolvidables juntos!</span>
                 </p>
-            </section>
+            </div>
+            <div class="subscribe">
+                <form>
+                    <p>Subscribete a nuestra lista de correo para recibir estar a la ultima con nuestros parques</p>
+                    <div>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="text" id="correo" placeholder="ejemplo@gmail.com">
+                    </div>
+                    <button type="submit">Subscribirse</button>
+                </form>
+            </div>
         </main>
         <footer>
             <p>Todos los derechos reservados</p>
             <div class="redes">
                 <div class="iconos">
-                    <img class="insta" src="./img/iconos/5335781_camera_instagram_social media_instagram logo_icon.svg">
-                    <img class="x" src="./img/iconos/11244080_x_twitter_elon musk_twitter new logo_icon.svg">
+                    <img class="insta" src="./img/iconos/5335781_camera_instagram_social_media_instagram_logo_icon.svg" alt="instaIcon">
+                    <img class="x" src="./img/iconos/11244080_x_twitter_elon_musk_twitter_new_logo_icon.svg" alt="xIcon">
                 </div>
             </div>
         </footer>

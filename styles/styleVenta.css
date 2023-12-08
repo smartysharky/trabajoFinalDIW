@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "prices"
+        "buy";
+}
+
+.prices {
+    grid-area: prices;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 70%;
+    margin: 2% 5%;
+    text-align: left;
+    background-color: rgb(235, 235, 235);
+    padding: 3%;
+    border-radius: 5%;
+}
+
+th,
+td {
+    padding: 0.5%;
+}
+
+.buy {
+    grid-area: buy;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+    border: 3px solid #F24747;
+    border-radius: 5%;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "tickets aside";
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #62A6E8;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #62A6E8;
+}
+
+.tickets {
+    grid-area: tickets;
+}
+
+.tickets h4 {
+    text-align: center;
+}
+
+.ticketType {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticketType div,
+.dateTime div {
+    margin-bottom: 2%;
+}
+
+.infoPay {
+    margin-top: 4%;
+}
+
+.infoPay div div {
+    margin-bottom: 2%;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.help {
+    background-color: #62A6E8;
+    border-radius: 5%;
+    padding: 3% 4%;
+    padding-bottom: 4%;
+}
+
+.help h4 {
+    text-align: center;
+}
+
+.help form div {
+    margin-bottom: 5%;
+}
+
+.help textarea {
+    width: 100%;
+    height: 70px;
+}
+
+.help button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #F24747;
+    color: #fff;
+    border: 1px solid #F24747;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.help button:hover {
+    background-color: #d73232;
+}
+
+@media screen and (max-width: 950px) {
+    .buy {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "tickets"
+            "aside";
+    }
+
+    aside {
+        margin-top: 5%;
+    }
+}

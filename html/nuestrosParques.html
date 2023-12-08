@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <title>Aventura Land</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/styleNuesParques.css">
-
     <link rel="stylesheet" href="../styles/hamburger.css">
+   <!-- hamburger icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="atracciones, parques de atracciones, parques temáticos">
+   <meta name="description" content="Explora la magia de Aventura Land, donde la diversión cobra vida en nuestros parques temáticos.">
 </head>
 
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="../img/logo1.svg">
+                <img src="../img/logo1.svg" alt="logo">
                 <h1>Aventura Land</h1>
             </div>
             <div class="hamburger-menu">
@@ -28,48 +32,50 @@
             </div>
         </header>
         <main>
-            <div class="lookPark">
-                <div class="search">
-                    <img>
-                    <input type="text">
-                </div>
-                <div class="map"></div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/d/embed?mid=14VZdqJAiJAIP874kT0XBGpwG-zTn81s&ehbc=2E312F&noprof=1"
+                    width="640" height="480"></iframe>
             </div>
             <div class="parksCollection">
-                <div class="park">
-                    <img src="">
-                    <div class="desc">
-                        <h3></h3>
+                <div class="row1">
+                    <div class="park">
+                        <img src="../img/parks/ALmadrid.jpg" alt="parqueMadrid">
+                        <div class="desc">
+                            <h3>Aventura Land Madrid</h3>
+                        </div>
+                    </div>
+                    <div class="park">
+                        <img src="../img/parks/ALfrancia.jpeg" alt="parqueFrancia">
+                        <div class="desc">
+                            <h3>Aventura Land Francia</h3>
+                        </div>
+                    </div>
+                    <div class="park">
+                        <img src="../img/parks/ALsuiza.png" alt="parqueSuiza">
+                        <div class="desc">
+                            <h3>Aventura Land Suiza</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="park">
-                    <img src="">
-                    <div class="desc">
-                        <h3></h3>
+                <div class="row2">
+                    <div class="park">
+                        <img src="../img/parks/ALuk.jpeg" alt="parqueUk">
+                        <div class="desc">
+                            <h3>Aventura Land UK</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="park">
-                    <img src="">
-                    <div class="desc">
-                        <h3></h3>
+                    <div class="park">
+                        <img src="../img/parks/ALholanda.jpg" alt="parqueHolanda">
+                        <div class="desc">
+                            <h3>Aventura Land Holanda</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="park">
-                    <img src="">
-                    <div class="desc">
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="park">
-                    <img src="">
-                    <div class="desc">
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="park">
-                    <img src="">
-                    <div class="desc">
-                        <h3></h3>
+                    <div class="park">
+                        <img src="../img/parks/ALalemania.jpeg" alt="parqueAlemania">
+                        <div class="desc">
+                            <h3>Aventura Land Alemania</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,8 +84,8 @@
             <p>Todos los derechos reservados</p>
             <div class="redes">
                 <div class="iconos">
-                    <img class="insta" src="../img/iconos/5335781_camera_instagram_social media_instagram logo_icon.svg">
-                    <img class="x" src="../img/iconos/11244080_x_twitter_elon musk_twitter new logo_icon.svg">
+                    <img class="insta" src="../img/iconos/5335781_camera_instagram_social_media_instagram_logo_icon.svg" alt="instaIcon">
+                    <img class="x" src="../img/iconos/11244080_x_twitter_elon_musk_twitter_new_logo_icon.svg" alt="xIcon">
                 </div>
             </div>
         </footer>

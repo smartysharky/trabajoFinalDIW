@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <title>Aventura Land</title>
@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/styleVenta.css">
     <link rel="stylesheet" href="../styles/hamburger.css">
+    <!-- hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="atracciones, parques de atracciones, parques temáticos">
+    <meta name="description" content="Explora la magia de Aventura Land, donde la diversión cobra vida en nuestros parques temáticos.">
 </head>
 
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="../img/logo1.svg">
+                <img src="../img/logo1.svg" alt="logo">
                 <h1>Aventura Land</h1>
             </div>
             <div class="hamburger-menu">
@@ -29,61 +34,146 @@
         <main>
             <div class="prices">
                 <table>
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Online</th>
-                        <th>Taquilla</th>
-                    </tr>
-                    <tr>
-                        <td>General
-                            <ul>
-                                <li>Más de 140cm</li>
-                            </ul>
-                        </td>
-                        <td>29,90€</td>
-                        <td>55,90€</td>
-                    </tr>
-                    <tr>
-                        <td>Junior
-                            <ul>
-                                <li>Entre 100cm-140cm</li>
-                            </ul>
-                        </td>
-                        <td>29,90€</td>
-                        <td>52,90€</td>
-                    </tr>
-                    <tr>
-                        <td>Reducida
-                            <ul>
-                                <li>Senior (mayor de 65)</li>
-                                <li>Personas con descapacidad (igual o +33%) +1 acompañante gratis</li>
-                                <li>Familia numerosa (por persona)</li>
-                            </ul>
-                        </td>
-                        <td>29,90€</td>
-                        <td>52,90€</td>
-                    </tr>
-                    <tr>
-                        <td>Niños
-                            <ul>
-                                <li>Menos de 100cm</li>
-                            </ul>
-                        </td>
-                        <td>0,00€</td>
-                        <td>0,00€</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Online</th>
+                            <th>Taquilla</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General
+                                <ul>
+                                    <li>Más de 140cm</li>
+                                </ul>
+                            </td>
+                            <td>29,90€</td>
+                            <td>55,90€</td>
+                        </tr>
+                        <tr>
+                            <td>Junior
+                                <ul>
+                                    <li>Entre 100cm-140cm</li>
+                                </ul>
+                            </td>
+                            <td>29,90€</td>
+                            <td>52,90€</td>
+                        </tr>
+                        <tr>
+                            <td>Reducida
+                                <ul>
+                                    <li>Senior (mayor de 65)</li>
+                                    <li>Personas con descapacidad (igual o +33%) +1 acompañante gratis</li>
+                                    <li>Familia numerosa (por persona)</li>
+                                </ul>
+                            </td>
+                            <td>29,90€</td>
+                            <td>52,90€</td>
+                        </tr>
+                        <tr>
+                            <td>Niños
+                                <ul>
+                                    <li>Menos de 100cm</li>
+                                </ul>
+                            </td>
+                            <td>0,00€</td>
+                            <td>0,00€</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
-            <div>
-                <form></form>
+            <div class="buy">
+                <div class="tickets">
+                    <h4>Compra tus entradas ahora</h4>
+                    <form>
+                        <div class="ticketType">
+                            <div>
+                                <label for="gen">General </label>
+                                <input type="number" id="gen" min="0" max="10">
+                            </div>
+                            <div>
+                                <label for="jun">Junior </label>
+                                <input type="number" id="jun" min="0" max="10">
+                            </div>
+                            <div>
+                                <label for="red">Reducida </label>
+                                <input type="number" id="red" min="0" max="10">
+                            </div>
+                        </div>
+                        <div class="dateTime">
+                            <div>
+                                <label for="date">Elije una fecha de llegada al parque</label>
+                                <input id="date" type="date">
+                            </div>
+                            <div>
+                                <label for="time">Duración de la visita</label>
+                                <select id="time">
+                                    <option value="1d">1 día</option>
+                                    <option value="2d">2 días</option>
+                                    <option value="3d">3 días</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="infoPay">
+                            <div>
+                                <p>Método de pago:</p>
+                                <div>
+                                    <label for="tar">Tarjeta</label>
+                                    <input type="radio" id="tar" name="metodo" value="tar" checked>
+                                </div>
+                                <div>
+                                    <label for="apple">Apple pay</label>
+                                    <input type="radio" id="apple" name="metodo" value="apple">
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="nomT">Nombre en tarjeta:</label>
+                                    <input type="text" id="nomT" required>
+                                </div>
+                                <div>
+                                    <label for="numT">Numero de tarjeta:</label>
+                                    <input type="text" id="numT" required>
+                                </div>
+                                <div>
+                                    <label for="expDate">Fecha de caducidad</label>
+                                    <input type="text" id="expDate" placeholder="MM/YYYY" maxlength="7"
+                                        pattern="(0[1-9]|1[0-2])\/\d{4}" required>
+                                </div>
+                                <div>
+                                    <label for="cvv">CVV:</label>
+                                    <input type="text" id="cvv" placeholder="000" maxlength="4" pattern="\d{3,4}"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" id="buyButton">Comprar</button>
+                    </form>
+                </div>
+                <aside>
+                    <div class="help">
+                        <h4>¿Necesitas ayuda?</h4>
+                        <form>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div>
+                                <textarea placeholder="Deja aquí tu comentario o pregunta" required></textarea>
+                            </div>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </aside>
             </div>
         </main>
         <footer>
             <p>Todos los derechos reservados</p>
             <div class="redes">
                 <div class="iconos">
-                    <img class="insta" src="../img/iconos/5335781_camera_instagram_social media_instagram logo_icon.svg">
-                    <img class="x" src="../img/iconos/11244080_x_twitter_elon musk_twitter new logo_icon.svg">
+                    <img class="insta" src="../img/iconos/5335781_camera_instagram_social_media_instagram_logo_icon.svg" alt="instaIcon">
+                    <img class="x" src="../img/iconos/11244080_x_twitter_elon_musk_twitter_new_logo_icon.svg" alt="xIcon">
                 </div>
             </div>
         </footer>
