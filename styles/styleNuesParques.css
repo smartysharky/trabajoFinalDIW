@@ -70,10 +70,11 @@ iframe {
     margin-left: 20%;
     margin-right: 25%;
     border-radius: 5%;
+    padding: 5px;
 }
 
 .park img:hover {
-    border: 5px solid #F24747;
+    background-color: #F24747;
     border-radius: 5%;
 }
 
