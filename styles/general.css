@@ -9,7 +9,6 @@ body {
     -webkit-box-sizing: border-box;
 }
 
-
 header {
     grid-area: header;
     display: flex;
@@ -34,6 +33,15 @@ header {
 .logo img {
     width: 8%;
     float: left;
+}
+
+header nav ul li {
+    display:flex;
+    color: white;
+}
+
+header nav ul li:hover {
+    text-decoration: underline;
 }
 
 footer {
