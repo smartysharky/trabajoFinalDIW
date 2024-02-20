@@ -40,6 +40,14 @@ td {
     padding: 0.5%;
 }
 
+input {
+    font-size: 20px;
+}
+
+select {
+    font-size: 20px;
+}
+
 .buy {
     grid-area: buy;
     margin-left: 15%;
@@ -61,6 +69,8 @@ button {
     border: 2px solid #62A6E8;
     border-radius: 5%;
     cursor: pointer;
+
+    font-size: 20px;
 }
 
 button:hover {
@@ -119,6 +129,7 @@ aside {
 .help textarea {
     width: 100%;
     height: 70px;
+    font-size: 15px;
 }
 
 .help button {
@@ -129,6 +140,7 @@ aside {
     border: 1px solid #F24747;
     border-radius: 5%;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .help button:hover {

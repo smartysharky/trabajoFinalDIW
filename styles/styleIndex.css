@@ -78,6 +78,8 @@ main {
     animation-duration: 1.5s;
 }
 
+/*La letra dentro del square cambia de opacidad para 
+verse mejor cuando se pasa el botón por encima*/
 @keyframes fade {
     from {
         opacity: .4
@@ -88,7 +90,6 @@ main {
     }
 }
 
-
 .squares {
     grid-area: squares;
     width: 100%;
@@ -96,7 +97,7 @@ main {
     align-items: center;
     justify-content: space-between;
     justify-content: space-evenly;
-    margin-top: -16%;
+    margin-top: -15%;
 }
 
 .squares .card {
@@ -189,7 +190,8 @@ main {
     margin-left: 25%;
     margin-right: 25%;
     line-height: 27px;
-    margin-bottom: 1%;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .subscribe{
@@ -206,6 +208,10 @@ main {
     flex-direction: column;
 }
 
+.subscribe form input{
+    font-size: 20px;
+}
+
 button {
     grid-area: button;
     padding: 10px 0px;
@@ -216,10 +222,19 @@ button {
     justify-self: center;
     border: 2px solid #62A6E8;
     cursor: pointer;
+    font-size: 20px;
 }
 
 button:hover {
     background-color: #62A6E8;
+}
+
+/*Este media se asegura de que las tarjetas siempre esten en la linea entre el carousel
+y el resto de la pagina*/
+@media screen and (min-width: 2300px) {
+    .squares{
+        margin-top: -10%;
+    }
 }
 
 @media screen and (max-width: 700px){
