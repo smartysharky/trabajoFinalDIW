@@ -39,6 +39,27 @@ main {
     width: 100%;
 }
 
+.slide-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; 
+    z-index: 1;
+    font-size: 13px;
+    text-align: left;
+    padding: 5px;
+    background-color: #62A6E8;
+    border-radius: 13px;
+}
+
+.slide-text:hover{
+    background-color: #F24747;
+}
+
+.slide-text a{
+    text-decoration: none;
+    color: #333;
+}
+
 /* Next & previous buttons */
 .prev,
 .next {
@@ -184,7 +205,6 @@ verse mejor cuando se pasa el botón por encima*/
     color: #fff;
 }
 
-
 .txt {
     grid-area: txt;
     margin-left: 25%;
@@ -192,6 +212,22 @@ verse mejor cuando se pasa el botón por encima*/
     line-height: 27px;
     margin-bottom: 20px;
     margin-top: 15px;
+}
+
+video {
+    width: 100%;    
+}
+
+.creditos{
+    font-size: 13px;
+}
+
+.creditos a{
+    color: #62A6E8;
+}
+
+.creditos a:hover{
+    color: #F24747;
 }
 
 .subscribe{
@@ -213,9 +249,8 @@ verse mejor cuando se pasa el botón por encima*/
 }
 
 button {
-    grid-area: button;
     padding: 10px 0px;
-    width: 15%;
+     width: 15%;
     border: none;
     margin-top: 2%;
     border-radius: 5%;
@@ -223,6 +258,7 @@ button {
     border: 2px solid #62A6E8;
     cursor: pointer;
     font-size: 20px;
+    min-width: 150px;
 }
 
 button:hover {
