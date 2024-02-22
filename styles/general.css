@@ -33,6 +33,7 @@ header {
 .logo img {
     width: 8%;
     float: left;
+    z-index: 1;
 }
 
 header nav ul {
@@ -48,12 +49,11 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
 header nav ul li:hover {
-    color: white;
     text-shadow: 1px 5px 5px #F24747;
 }
 
