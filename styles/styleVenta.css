@@ -29,15 +29,17 @@ main {
 table {
     width: 70%;
     margin: 2% 5%;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
     text-align: left;
-    background-color: rgb(235, 235, 235);
-    padding: 3%;
-    border-radius: 5%;
+    padding: 8px;
 }
 
-th,
-td {
-    padding: 0.5%;
+th,tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 input {
@@ -82,6 +84,7 @@ button:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;
 }
 
 .tickets h4 {
