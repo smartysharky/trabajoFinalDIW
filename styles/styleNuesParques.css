@@ -14,18 +14,49 @@ main {
     grid-template-rows: auto auto;
     grid-template-columns: auto;
     grid-template-areas:
+        "horario"
         "map"
         "parksCollection";
 }
 
+.horario{
+    grid-area: horario;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 3%;
+}
+
+.horario .aviso{
+    text-align: center;
+}
+
+.time {
+    grid-area: prices;
+    display: flex;
+    justify-content: center;
+}
+
+.horario table {
+    border: 2px solid #62A6E8;
+    width: 80%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+    padding: 3%;
+}
+
+th{
+    color: #F24747;
+}
+
 .map {
+    grid-area: map;
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 3%;
 }
 
 iframe{
-    border: 7px solid #62A6E8;
     border-radius: 5%;
 }
 
@@ -71,6 +102,10 @@ iframe {
     margin-right: 25%;
     border-radius: 5%;
     padding: 5px;
+}
+
+.park h2{
+    font-size: 23px;
 }
 
 .park:hover{

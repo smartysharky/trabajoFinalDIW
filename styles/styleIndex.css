@@ -239,16 +239,21 @@ video {
     width: 100%;    
 }
 
+audio {
+    width: 100%;
+}
+
 .creditos{
     font-size: 13px;
 }
 
 .creditos a{
-    color: #62A6E8;
+    text-decoration: none;
+    color: #F24747;
 }
 
 .creditos a:hover{
-    color: #F24747;
+   text-decoration: underline;
 }
 
 .subscribe{

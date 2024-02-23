@@ -6,9 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/styleVenta.css">
-    <link rel="stylesheet" href="../styles/hamburger.css">
-    <!-- hamburger icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="atracciones, parques de atracciones, parques temáticos">
     <meta name="description"
@@ -34,9 +32,9 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Tipo</th>
-                            <th>Online</th>
-                            <th>Taquilla</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Online</th>
+                            <th scope="col">Taquilla</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,32 +80,47 @@
                 </table>
             </div>
             <div class="buy">
+
                 <div class="tickets">
                     <h4>Compra tus entradas ahora</h4>
                     <form>
                         <div class="ticketType">
-                            <p>Número de entradas:</p>
-                            <div>
-                                <label for="gen">General </label>
+                            <h5>Tipo y número de entradas:</h5>
+                            <div class="parkOption">
+                                <label for="time">Parque que quieres visitar:</label>
+                                <select id="time">
+                                    <option value=""></option>
+                                    <option value="1">Aventura Land Madrid</option>
+                                    <option value="2">Aventura Land Francia</option>
+                                    <option value="3">Aventura Land Suiza</option>
+                                    <option value="4">Aventura Land UK</option>
+                                    <option value="5">Aventura Land Holanda</option>
+                                    <option value="6">Aventura Land Alemania</option>
+                                </select>
+                            </div>
+                            <div class="ticketOption">
+                                <label for="gen">General:</label>
                                 <input type="number" id="gen" min="0" max="10">
                             </div>
-                            <div>
-                                <label for="jun">Junior </label>
+                            <div class="ticketOption">
+                                <label for="jun">Junior:</label>
                                 <input type="number" id="jun" min="0" max="10">
                             </div>
-                            <div>
-                                <label for="red">Reducida </label>
+                            <div class="ticketOption">
+                                <label for="red">Reducida:</label>
                                 <input type="number" id="red" min="0" max="10">
                             </div>
                         </div>
                         <div class="dateTime">
-                            <div>
-                                <label for="date">Elije una fecha de llegada al parque</label>
+                            <h5>Fecha y duración de la visita:</h5>
+                            <div class="dateTimeOption">
+                                <label for="date">Fecha de llegada al parque:</label>
                                 <input id="date" type="date">
                             </div>
-                            <div>
-                                <label for="time">Duración de la visita</label>
+                            <div class="dateTimeOption">
+                                <label for="time">Duración de la visita:</label>
                                 <select id="time">
+                                    <option value=""></option>
                                     <option value="1d">1 día</option>
                                     <option value="2d">2 días</option>
                                     <option value="3d">3 días</option>
@@ -115,41 +128,38 @@
                             </div>
                         </div>
                         <div class="infoPay">
-                            <div>
-                                <p>Método de pago:</p>
-                                <div>
-                                    <label for="tar">Tarjeta</label>
-                                    <input type="radio" id="tar" name="metodo" value="tar" checked>
-                                </div>
-                                <div>
-                                    <label for="apple">Apple pay</label>
-                                    <input type="radio" id="apple" name="metodo" value="apple">
-                                </div>
+                            <h5>Información de pago:</h5>
+                            <div class="paymentOption">
+                                <input type="radio" id="tar" name="metodo" value="tar" checked>
+                                <label for="tar">Tarjeta</label>
                             </div>
-                            <div>
+                            <div class="paymentOption">
+                                <input type="radio" id="apple" name="metodo" value="apple">
+                                <label for="apple">Apple Pay</label>
+                            </div>
+                            <div class="paymentDetails">
                                 <div>
-                                    <label for="nomT">Nombre en tarjeta:</label>
+                                    <label for="nomT">Nombre en la tarjeta:</label>
                                     <input type="text" id="nomT" required>
                                 </div>
                                 <div>
-                                    <label for="numT">Numero de tarjeta:</label>
-                                    <input type="text" id="numT" required>
+                                    <label for="numT">Número de la tarjeta:</label>
+                                    <input autocomplete="cc-number" type="text" id="numT" required>
                                 </div>
                                 <div>
-                                    <label for="expDate">Fecha de caducidad</label>
-                                    <input type="text" id="expDate" placeholder="MM/YYYY" maxlength="7"
-                                        pattern="(0[1-9]|1[0-2])\/\d{4}" required>
+                                    <label for="expDate">Fecha de caducidad:</label>
+                                    <input autocomplete="cc-exp" type="text" id="expDate" placeholder="MM/YYYY" maxlength="7" pattern="(0[1-9]|1[0-2])\/\d{4}" required>
                                 </div>
                                 <div>
                                     <label for="cvv">CVV:</label>
-                                    <input type="text" id="cvv" placeholder="000" maxlength="4" pattern="\d{3,4}"
-                                        required>
+                                    <input type="text" id="cvv" placeholder="000" maxlength="4" pattern="\d{3,4}" required>
                                 </div>
                             </div>
                         </div>
                         <button type="submit" id="buyButton">Comprar</button>
                     </form>
                 </div>
+                
                 <aside>
                     <div class="help">
                         <h4>¿Necesitas ayuda?</h4>
@@ -159,7 +169,8 @@
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div>
-                                <textarea placeholder="Deja aquí tu comentario o pregunta" required></textarea>
+                                <label for="help">¿Cómo podemos ayudarte?</label>
+                                <textarea name="help" placeholder="Deja aquí tu comentario o pregunta" required></textarea>
                             </div>
                             <button type="submit">Enviar</button>
                         </form>
