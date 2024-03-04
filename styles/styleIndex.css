@@ -182,12 +182,12 @@ verse mejor cuando se pasa el botón por encima*/
     max-width: 100px;
 }
 
-.squares .card .face.face1 .content h3 {
+.squares .card .face.face1 .content h2 {
     margin: 10px 0 0;
     padding: 0;
     color: #fff;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 30px;
 }
 
 .squares .card .face.face2 {
@@ -248,12 +248,13 @@ audio {
 }
 
 .creditos a{
-    text-decoration: none;
+    text-decoration: underline;
     color: #F24747;
 }
 
 .creditos a:hover{
    text-decoration: underline;
+   color: #62A6E8;
 }
 
 .subscribe{

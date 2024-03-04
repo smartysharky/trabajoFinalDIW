@@ -17,7 +17,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img src="../img/logo1.svg" alt="logo de aventura land">
+                <img src="../img/logo1.svg" alt="">
                 <h1>AVENTURA LAND</h1>
             </div>
             <nav>
@@ -30,65 +30,66 @@
         <main>
             <div class="prices">
                 <table>
+                    <caption>Precios de las entradas</caption>
                     <thead>
                         <tr>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Online</th>
-                            <th scope="col">Taquilla</th>
+                            <th scope="col" id="tipo"><abbr title="Tipo de entrada">Tipo</abbr></th>
+                            <th scope="col" id="online"><abbr title="Precio por venta online">Online</abbr></th>
+                            <th scope="col" id="taquilla"><abbr title="Precio por venta en taquilla">Taquilla</abbr></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>General
+                            <td headers="tipo">General
                                 <ul>
                                     <li>Más de 140cm</li>
                                 </ul>
                             </td>
-                            <td>29,90€</td>
-                            <td>55,90€</td>
+                            <td headers="online">29,90€</td>
+                            <td headers="taquilla">55,90€</td>
                         </tr>
                         <tr>
-                            <td>Junior
+                            <td headers="tipo">Junior
                                 <ul>
                                     <li>Entre 100cm-140cm</li>
                                 </ul>
                             </td>
-                            <td>29,90€</td>
-                            <td>52,90€</td>
+                            <td headers="online">29,90€</td>
+                            <td headers="taquilla">52,90€</td>
                         </tr>
                         <tr>
-                            <td>Reducida
+                            <td headers="tipo">Reducida
                                 <ul>
                                     <li>Senior (mayor de 65)</li>
                                     <li>Personas con descapacidad (igual o +33%) +1 acompañante gratis</li>
                                     <li>Familia numerosa (por persona)</li>
                                 </ul>
                             </td>
-                            <td>29,90€</td>
-                            <td>52,90€</td>
+                            <td headers="online">29,90€</td>
+                            <td headers="taquilla">52,90€</td>
                         </tr>
                         <tr>
-                            <td>Niños
+                            <td headers="tipo">Niños
                                 <ul>
                                     <li>Menos de 100cm</li>
                                 </ul>
                             </td>
-                            <td>0,00€</td>
-                            <td>0,00€</td>
+                            <td headers="online">0,00€</td>
+                            <td headers="taquilla">0,00€</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="buy">
-
                 <div class="tickets">
-                    <h4>Compra tus entradas ahora</h4>
+                    <h2>Compra tus entradas ahora</h2>
+                    <p class="req">Todos los campos son obligatorios</p>
                     <form>
                         <div class="ticketType">
-                            <h5>Tipo y número de entradas:</h5>
+                            <h3>Tipo y número de entradas:</h3>
                             <div class="parkOption">
-                                <label for="time">Parque que quieres visitar:</label>
-                                <select id="time">
+                                <label for="park">Parque que quieres visitar:</label>
+                                <select id="park">
                                     <option value=""></option>
                                     <option value="1">Aventura Land Madrid</option>
                                     <option value="2">Aventura Land Francia</option>
@@ -100,19 +101,19 @@
                             </div>
                             <div class="ticketOption">
                                 <label for="gen">General:</label>
-                                <input type="number" id="gen" min="0" max="10">
+                                <input type="number" id="gen" min="0" max="10" value="0">
                             </div>
                             <div class="ticketOption">
                                 <label for="jun">Junior:</label>
-                                <input type="number" id="jun" min="0" max="10">
+                                <input type="number" id="jun" min="0" max="10" value="0">
                             </div>
                             <div class="ticketOption">
                                 <label for="red">Reducida:</label>
-                                <input type="number" id="red" min="0" max="10">
+                                <input type="number" id="red" min="0" max="10" value="0">
                             </div>
                         </div>
                         <div class="dateTime">
-                            <h5>Fecha y duración de la visita:</h5>
+                            <h3>Fecha y duración de la visita:</h3>
                             <div class="dateTimeOption">
                                 <label for="date">Fecha de llegada al parque:</label>
                                 <input id="date" type="date">
@@ -128,23 +129,21 @@
                             </div>
                         </div>
                         <div class="infoPay">
-                            <h5>Información de pago:</h5>
+                            <h3>Información de pago:</h3>
                             <div class="paymentOption">
                                 <input type="radio" id="tar" name="metodo" value="tar" checked>
                                 <label for="tar">Tarjeta</label>
-                            </div>
-                            <div class="paymentOption">
                                 <input type="radio" id="apple" name="metodo" value="apple">
                                 <label for="apple">Apple Pay</label>
                             </div>
                             <div class="paymentDetails">
                                 <div>
                                     <label for="nomT">Nombre en la tarjeta:</label>
-                                    <input type="text" id="nomT" required>
+                                    <input type="text" id="nomT" pattern="^[a-zA-Z\s]+$" required placeholder="Nombre competo">
                                 </div>
                                 <div>
                                     <label for="numT">Número de la tarjeta:</label>
-                                    <input autocomplete="cc-number" type="text" id="numT" required>
+                                    <input autocomplete="cc-number" type="text" id="numT" required pattern="[0-9]{16}" placeholder="1234 1234 1234 1234">
                                 </div>
                                 <div>
                                     <label for="expDate">Fecha de caducidad:</label>
@@ -156,13 +155,13 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" id="buyButton">Comprar</button>
+                        <button type="submit" aria-label="Enviar información de compra" id="buyButton">Comprar</button>
                     </form>
                 </div>
                 
                 <aside>
                     <div class="help">
-                        <h4>¿Necesitas ayuda?</h4>
+                        <h2>¿Necesitas ayuda?</h2>
                         <form>
                             <div>
                                 <label for="email">Email:</label>
@@ -172,7 +171,7 @@
                                 <label for="help">¿Cómo podemos ayudarte?</label>
                                 <textarea name="help" placeholder="Deja aquí tu comentario o pregunta" required></textarea>
                             </div>
-                            <button type="submit">Enviar</button>
+                            <button type="submit" aria-label="Enviar pregunta">Enviar</button>
                         </form>
                     </div>
                 </aside>
