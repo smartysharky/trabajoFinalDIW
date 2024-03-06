@@ -90,7 +90,6 @@
                             <div class="parkOption">
                                 <label for="park">Parque que quieres visitar:</label>
                                 <select id="park">
-                                    <option value=""></option>
                                     <option value="1">Aventura Land Madrid</option>
                                     <option value="2">Aventura Land Francia</option>
                                     <option value="3">Aventura Land Suiza</option>
@@ -121,7 +120,6 @@
                             <div class="dateTimeOption">
                                 <label for="time">Duración de la visita:</label>
                                 <select id="time">
-                                    <option value=""></option>
                                     <option value="1d">1 día</option>
                                     <option value="2d">2 días</option>
                                     <option value="3d">3 días</option>
@@ -169,7 +167,7 @@
                             </div>
                             <div>
                                 <label for="help">¿Cómo podemos ayudarte?</label>
-                                <textarea name="help" placeholder="Deja aquí tu comentario o pregunta" required></textarea>
+                                <textarea name="help" id="help" placeholder="Deja aquí tu comentario o pregunta" aria-label="Ayuda" required></textarea>
                             </div>
                             <button type="submit" aria-label="Enviar pregunta">Enviar</button>
                         </form>
